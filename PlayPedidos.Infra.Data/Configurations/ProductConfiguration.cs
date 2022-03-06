@@ -16,7 +16,7 @@ namespace PlayPedidos.Infra.Data.Configurations
 				.HasMaxLength(150);
 
 			builder.Property(i => i.Description)
-				.HasMaxLength(4000);
+				.HasMaxLength(2000);
 
 			builder.Property(i => i.UrlPhoto)
 				.HasMaxLength(150);
