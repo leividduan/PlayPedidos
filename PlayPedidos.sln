@@ -5,17 +5,21 @@ VisualStudioVersion = 17.0.32002.185
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - API", "0 - API", "{9A6628A7-406C-4742-9C0D-93C84EF7763E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayPedidos.API", "PlayPedidos.API\PlayPedidos.API.csproj", "{1127DF8E-45C8-4BCE-9A5F-EA67ED901550}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlayPedidos.API", "PlayPedidos.API\PlayPedidos.API.csproj", "{1127DF8E-45C8-4BCE-9A5F-EA67ED901550}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Domain", "1 - Domain", "{EA8566D0-08F4-48D2-9EF6-0DE3697B628D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayPedidos.Domain", "PlayPedidos.Domain\PlayPedidos.Domain.csproj", "{CF7930FD-48A8-4512-BB51-69CF69440057}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlayPedidos.Domain", "PlayPedidos.Domain\PlayPedidos.Domain.csproj", "{CF7930FD-48A8-4512-BB51-69CF69440057}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Infra", "2 - Infra", "{E5273CDA-1E97-4B4C-8910-7F75AEDA9DCA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayPedidos.Infra.Data", "PlayPedidos.Infra.Data\PlayPedidos.Infra.Data.csproj", "{85E3AA74-B259-42DC-9175-32FEF7A21AA6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlayPedidos.Infra.Data", "PlayPedidos.Infra.Data\PlayPedidos.Infra.Data.csproj", "{85E3AA74-B259-42DC-9175-32FEF7A21AA6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayPedidos.Infra.IoC", "PlayPedidos.Infra.IoC\PlayPedidos.Infra.IoC.csproj", "{79A734D7-57C0-496D-AFE6-23CD53BC4BFB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlayPedidos.Infra.IoC", "PlayPedidos.Infra.IoC\PlayPedidos.Infra.IoC.csproj", "{79A734D7-57C0-496D-AFE6-23CD53BC4BFB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Tests", "3 - Tests", "{22093327-C266-4E04-81AD-C82C204374E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayPedidos.Tests", "PlayPedidos.Tests\PlayPedidos.Tests.csproj", "{9C177280-7EAD-4CD1-8D79-76C9940A3470}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +43,10 @@ Global
 		{79A734D7-57C0-496D-AFE6-23CD53BC4BFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79A734D7-57C0-496D-AFE6-23CD53BC4BFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{79A734D7-57C0-496D-AFE6-23CD53BC4BFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C177280-7EAD-4CD1-8D79-76C9940A3470}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C177280-7EAD-4CD1-8D79-76C9940A3470}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C177280-7EAD-4CD1-8D79-76C9940A3470}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C177280-7EAD-4CD1-8D79-76C9940A3470}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,6 +56,7 @@ Global
 		{CF7930FD-48A8-4512-BB51-69CF69440057} = {EA8566D0-08F4-48D2-9EF6-0DE3697B628D}
 		{85E3AA74-B259-42DC-9175-32FEF7A21AA6} = {E5273CDA-1E97-4B4C-8910-7F75AEDA9DCA}
 		{79A734D7-57C0-496D-AFE6-23CD53BC4BFB} = {E5273CDA-1E97-4B4C-8910-7F75AEDA9DCA}
+		{9C177280-7EAD-4CD1-8D79-76C9940A3470} = {22093327-C266-4E04-81AD-C82C204374E3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {97D8A7AA-2C8E-4F12-909C-5F4EA72C7862}

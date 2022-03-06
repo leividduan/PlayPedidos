@@ -1,7 +1,7 @@
 ﻿using FluentValidation.Results;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace PlayPedidos.Domain.Entity
+namespace PlayPedidos.Domain.Entities
 {
 	public abstract class Entity
 	{

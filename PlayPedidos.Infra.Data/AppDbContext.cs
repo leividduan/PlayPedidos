@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using PlayPedidos.Domain.Entities;
 
 namespace PlayPedidos.Infra.Data
 {
@@ -7,6 +8,7 @@ namespace PlayPedidos.Infra.Data
 		public AppDbContext(DbContextOptions<AppDbContext> options)
 			: base(options) { }
 
+		public DbSet<Product> Product { get; set; }
 
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
