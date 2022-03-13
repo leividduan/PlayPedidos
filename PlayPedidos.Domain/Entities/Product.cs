@@ -4,16 +4,10 @@ namespace PlayPedidos.Domain.Entities
 {
 	public class Product : Entity
 	{
-		public string Name { get; set; }
-		public string Description { get; set; }
-		public string UrlPhoto { get; set; }
-		public bool IsActive { get; set; }
-		public DateTime CreatedAt { get; set; }
-		public DateTime UpdatedAt { get; set; }
-
-		public Product()
-		{
-		}
+		public string Name { get; private set; }
+		public string Description { get; private set; }
+		public string UrlPhoto { get; private set; }
+		public bool IsActive { get; private set; }
 
 		public Product(string name, string description, string urlPhoto, bool isActive)
 		{
@@ -21,6 +15,25 @@ namespace PlayPedidos.Domain.Entities
 			Description = description;
 			UrlPhoto = urlPhoto;
 			IsActive = isActive;
+		}
+
+		public void Activate()
+		{
+			IsActive = true;
+		}
+
+		public void Deactivate()
+		{
+			IsActive = false;
+		}
+
+		public void Update(string name, string description, string urlPhoto)
+		{
+			Name = name;
+			Description = description;
+			UrlPhoto = urlPhoto;
+
+			UpdatedAt = DateTime.Now;
 		}
 
 		public override bool IsValid()
