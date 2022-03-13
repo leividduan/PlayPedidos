@@ -17,19 +17,22 @@ namespace DezContas.Data.Repositories
 		public async Task<bool> Add(TEntity entity)
 		{
 			var entityAdded = await _context.Set<TEntity>().AddAsync(entity);
+			await _context.SaveChangesAsync();
 			return entityAdded != null;
 		}
 
-		public bool Edit(TEntity entity)
+		public async Task<bool> Edit(TEntity entity)
 		{
 			_context.Entry(entity).State = EntityState.Modified;
 			var entityEdited = _context.Set<TEntity>().Update(entity);
+			await _context.SaveChangesAsync();
 			return entityEdited != null;
 		}
 
-		public bool Delete(TEntity entity)
+		public async Task<bool> Delete(TEntity entity)
 		{
 			var entityDeleted = _context.Set<TEntity>().Remove(entity);
+			await _context.SaveChangesAsync();
 			return entityDeleted != null;
 		}
 

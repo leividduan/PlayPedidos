@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq.Expressions;
-using System.Threading.Tasks;
+﻿using System.Linq.Expressions;
 
 namespace DezContas.Domain.Interfaces.Repositories
 {
@@ -10,8 +7,8 @@ namespace DezContas.Domain.Interfaces.Repositories
 		public Task<TEntity> GetSingle(Expression<Func<TEntity, bool>> filter = null, string include = null);
 		public Task<IEnumerable<TEntity>> Get(Expression<Func<TEntity, bool>> filter = null, string include = null);
 		public Task<bool> Add(TEntity entity);
-		public bool Edit(TEntity entity);
-		public bool Delete(TEntity entity);
+		public Task<bool> Edit(TEntity entity);
+		public Task<bool> Delete(TEntity entity);
 		public Task<int> Save();
 	}
 }
