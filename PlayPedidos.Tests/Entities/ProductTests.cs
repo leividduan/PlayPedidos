@@ -2,7 +2,7 @@
 using System;
 using Xunit;
 
-namespace PlayPedidos.Tests.Entities
+namespace PlayPedidos.Domain.Tests.Entities
 {
 	public class ProductTests
 	{
