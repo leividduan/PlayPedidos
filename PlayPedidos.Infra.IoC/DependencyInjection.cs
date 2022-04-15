@@ -4,7 +4,9 @@ using FluentValidation;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using PlayPedidos.Domain.Interfaces.Repositories;
 using PlayPedidos.Infra.Data;
+using PlayPedidos.Infra.Data.Repositories;
 using System.Reflection;
 
 namespace PlayPedidos.Infra.IoC
@@ -26,6 +28,7 @@ namespace PlayPedidos.Infra.IoC
 		public static IServiceCollection AddRepositories(this IServiceCollection services)
 		{
 			services.AddScoped(typeof(IRepositoryBase<>), typeof(RepositoryBase<>));
+			services.AddScoped<IProductRepository, ProductRepository>();
 
 			return services;
 		}

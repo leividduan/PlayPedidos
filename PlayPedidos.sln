@@ -21,8 +21,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Tests", "3 - Tests", "{
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlayPedidos.Domain.Tests", "PlayPedidos.Tests\PlayPedidos.Domain.Tests.csproj", "{9C177280-7EAD-4CD1-8D79-76C9940A3470}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlayPedidos.API.Tests", "PlayPedidos.Api.Tests\PlayPedidos.API.Tests.csproj", "{817B49C8-F875-4C8D-9235-329805BAFDFB}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,10 +47,6 @@ Global
 		{9C177280-7EAD-4CD1-8D79-76C9940A3470}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C177280-7EAD-4CD1-8D79-76C9940A3470}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C177280-7EAD-4CD1-8D79-76C9940A3470}.Release|Any CPU.Build.0 = Release|Any CPU
-		{817B49C8-F875-4C8D-9235-329805BAFDFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{817B49C8-F875-4C8D-9235-329805BAFDFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{817B49C8-F875-4C8D-9235-329805BAFDFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{817B49C8-F875-4C8D-9235-329805BAFDFB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -63,7 +57,6 @@ Global
 		{85E3AA74-B259-42DC-9175-32FEF7A21AA6} = {E5273CDA-1E97-4B4C-8910-7F75AEDA9DCA}
 		{79A734D7-57C0-496D-AFE6-23CD53BC4BFB} = {E5273CDA-1E97-4B4C-8910-7F75AEDA9DCA}
 		{9C177280-7EAD-4CD1-8D79-76C9940A3470} = {22093327-C266-4E04-81AD-C82C204374E3}
-		{817B49C8-F875-4C8D-9235-329805BAFDFB} = {22093327-C266-4E04-81AD-C82C204374E3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {97D8A7AA-2C8E-4F12-909C-5F4EA72C7862}
