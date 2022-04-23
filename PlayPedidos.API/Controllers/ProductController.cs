@@ -34,10 +34,12 @@ namespace PlayPedidos.API.Controllers
 		{
 			var product = await _productRepository.GetSingle(x => x.ID == id);
 
-			if (product == null)
+			var viewModel = _mapper.Map<ProductViewModel>(product);
+
+			if (viewModel == null)
 				NotFound();
 
-			return Ok(product);
+			return Ok(viewModel);
 		}
 
 		[HttpPost]
