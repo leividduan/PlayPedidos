@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using PlayPedidos.API.ViewModel;
 using PlayPedidos.Domain.Entities;
-using PlayPedidos.Domain.Interfaces.Repositories;
+using PlayPedidos.Service.Interfaces;
 
 namespace PlayPedidos.API.Controllers
 {
@@ -11,18 +11,18 @@ namespace PlayPedidos.API.Controllers
 	public class ProductController : ControllerBase
 	{
 		private readonly IMapper _mapper;
-		private readonly IProductRepository _productRepository;
+		private readonly IProductService _productService;
 
-		public ProductController(IMapper mapper, IProductRepository productRepository)
+		public ProductController(IMapper mapper, IProductService productService)
 		{
 			_mapper = mapper;
-			_productRepository = productRepository;
+			_productService = productService;
 		}
 
 		[HttpGet]
 		public async Task<IActionResult> GetAll()
 		{
-			var products = await _productRepository.Get();
+			var products = await _productService.Get();
 
 			var productsViewModel = _mapper.Map<IEnumerable<ProductViewModel>>(products);
 
@@ -32,7 +32,7 @@ namespace PlayPedidos.API.Controllers
 		[HttpGet("{id}", Name = nameof(GetById))]
 		public async Task<IActionResult> GetById(int id)
 		{
-			var product = await _productRepository.GetSingle(x => x.ID == id);
+			var product = await _productService.GetSingle(x => x.ID == id);
 
 			var viewModel = _mapper.Map<ProductViewModel>(product);
 
@@ -53,7 +53,7 @@ namespace PlayPedidos.API.Controllers
 			if (!product.IsValid())
 				return BadRequest(_mapper.Map<ErrorViewModel>(product.GetErrors()));
 
-			await _productRepository.Add(product);
+			await _productService.Add(product);
 
 			var newProductViewModel = _mapper.Map<ProductViewModel>(product);
 			return new CreatedAtRouteResult(nameof(GetById), new { id = newProductViewModel.ID }, newProductViewModel);
@@ -71,7 +71,7 @@ namespace PlayPedidos.API.Controllers
 			if (!product.IsValid())
 				return BadRequest(_mapper.Map<ErrorViewModel>(product.GetErrors()));
 
-			await _productRepository.Edit(product);
+			await _productService.Edit(product);
 
 			var editedProductViewModel = _mapper.Map<ProductViewModel>(product);
 			return Ok(editedProductViewModel);
@@ -80,12 +80,12 @@ namespace PlayPedidos.API.Controllers
 		[HttpDelete]
 		public async Task<IActionResult> DeleteById(int id)
 		{
-			var product = await _productRepository.GetSingle(x => x.ID == id);
+			var product = await _productService.GetSingle(x => x.ID == id);
 
 			if (product == null)
 				return BadRequest();
 
-			await _productRepository.Delete(product);
+			await _productService.Delete(product);
 
 			return NoContent();
 		}

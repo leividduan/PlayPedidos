@@ -7,6 +7,8 @@ using Microsoft.Extensions.DependencyInjection;
 using PlayPedidos.Domain.Interfaces.Repositories;
 using PlayPedidos.Infra.Data;
 using PlayPedidos.Infra.Data.Repositories;
+using PlayPedidos.Service.Interfaces;
+using PlayPedidos.Service.Services;
 using System.Reflection;
 
 namespace PlayPedidos.Infra.IoC
@@ -17,6 +19,8 @@ namespace PlayPedidos.Infra.IoC
 		{
 			services.AddDbContext<AppDbContext>(options =>
 																					options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
+
+			services.AddServices();
 
 			services.AddRepositories();
 
@@ -29,6 +33,14 @@ namespace PlayPedidos.Infra.IoC
 		{
 			services.AddScoped(typeof(IRepositoryBase<>), typeof(RepositoryBase<>));
 			services.AddScoped<IProductRepository, ProductRepository>();
+
+			return services;
+		}
+
+		public static IServiceCollection AddServices(this IServiceCollection services)
+		{
+			services.AddScoped(typeof(IServiceBase<>), typeof(ServiceBase<>));
+			services.AddScoped<IProductService, ProductService>();
 
 			return services;
 		}

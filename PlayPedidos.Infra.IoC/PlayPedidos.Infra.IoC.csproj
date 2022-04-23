@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\PlayPedidos.Infra.Data\PlayPedidos.Infra.Data.csproj" />
+    <ProjectReference Include="..\PlayPedidos.Service\PlayPedidos.Service.csproj" />
   </ItemGroup>
 
 </Project>
