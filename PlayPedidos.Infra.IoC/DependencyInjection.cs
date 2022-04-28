@@ -4,11 +4,11 @@ using FluentValidation;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using PlayPedidos.Application.Interfaces;
+using PlayPedidos.Application.Services;
 using PlayPedidos.Domain.Interfaces.Repositories;
 using PlayPedidos.Infra.Data;
 using PlayPedidos.Infra.Data.Repositories;
-using PlayPedidos.Service.Interfaces;
-using PlayPedidos.Service.Services;
 using System.Reflection;
 
 namespace PlayPedidos.Infra.IoC

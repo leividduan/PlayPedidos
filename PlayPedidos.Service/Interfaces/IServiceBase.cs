@@ -1,6 +1,6 @@
 ﻿using System.Linq.Expressions;
 
-namespace PlayPedidos.Service.Interfaces
+namespace PlayPedidos.Application.Interfaces
 {
 	public interface IServiceBase<TEntity> : IDisposable where TEntity : class
 	{

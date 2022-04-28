@@ -1,8 +1,8 @@
-﻿using PlayPedidos.Domain.Entities;
+﻿using PlayPedidos.Application.Interfaces;
+using PlayPedidos.Domain.Entities;
 using PlayPedidos.Domain.Interfaces.Repositories;
-using PlayPedidos.Service.Interfaces;
 
-namespace PlayPedidos.Service.Services
+namespace PlayPedidos.Application.Services
 {
 	public class ProductService : ServiceBase<Product>, IProductService
 	{

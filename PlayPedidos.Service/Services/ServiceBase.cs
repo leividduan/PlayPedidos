@@ -1,8 +1,8 @@
 ﻿using DezContas.Domain.Interfaces.Repositories;
-using PlayPedidos.Service.Interfaces;
+using PlayPedidos.Application.Interfaces;
 using System.Linq.Expressions;
 
-namespace PlayPedidos.Service.Services
+namespace PlayPedidos.Application.Services
 {
 	public class ServiceBase<TEntity> : IDisposable, IServiceBase<TEntity> where TEntity : class
 	{

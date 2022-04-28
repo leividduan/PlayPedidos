@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using PlayPedidos.API.ViewModel;
+using PlayPedidos.Application.Interfaces;
 using PlayPedidos.Domain.Entities;
-using PlayPedidos.Service.Interfaces;
 
 namespace PlayPedidos.API.Controllers
 {

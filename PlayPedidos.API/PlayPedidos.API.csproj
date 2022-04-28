@@ -17,7 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\PlayPedidos.Infra.IoC\PlayPedidos.Infra.IoC.csproj" />
-    <ProjectReference Include="..\PlayPedidos.Service\PlayPedidos.Service.csproj" />
+    <ProjectReference Include="..\PlayPedidos.Service\PlayPedidos.Application.csproj" />
   </ItemGroup>
 
 </Project>
